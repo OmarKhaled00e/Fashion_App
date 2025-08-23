@@ -10,7 +10,7 @@ class ProductModel {
     required this.price,
     required this.description,
   });
-  List<ProductModel> product = [
+  static List<ProductModel> product = [
     ProductModel(
       image: 'assets/image/product1.png',
       name: 'October',
