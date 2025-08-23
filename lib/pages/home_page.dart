@@ -39,6 +39,7 @@ class HomePage extends StatelessWidget {
             Gap(120),
             Image.asset('assets/image/cover1.png'),
             Gap(20),
+            
           ],
         )
         
