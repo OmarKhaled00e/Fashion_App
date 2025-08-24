@@ -20,6 +20,12 @@ class TextStyles {
     fontFamily: 'Tenor Sans',
     color: Color(0xffDD8560),
   );
+  static TextStyle hintText15 = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 15,
+    fontFamily: 'Tenor Sans',
+    color: Color(0xff979797),
+  );
   static TextStyle text16Black = TextStyle(
     fontWeight: FontWeight.w400,
     fontSize: 16,
@@ -35,7 +41,7 @@ class TextStyles {
   );
   static TextStyle text18Black = TextStyle(
     fontWeight: FontWeight.w400,
-    letterSpacing: 10,
+    letterSpacing: 4,
     fontSize: 18,
     fontFamily: 'Tenor Sans',
     color: Color(0xff000000),

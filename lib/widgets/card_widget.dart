@@ -37,7 +37,7 @@ class _CardWidgetState extends State<CardWidget> {
             Text(widget.name.toUpperCase(), style: TextStyles.text14Black),
             Gap(10),
             SizedBox(
-              width: size.width * 0.8,
+              width: size.width * 0.5,
               child: Text(
                 widget.descrption,
                 style: TextStyles.textTitle12.copyWith(
@@ -50,7 +50,7 @@ class _CardWidgetState extends State<CardWidget> {
             Row(
               children: [
                 Qty(
-                  svg: 'assets/image/min.svg',
+                  svg: 'assets/image/mins.svg',
                   onTap: () {
                     setState(() {
                       if (number > 1) {
@@ -65,7 +65,7 @@ class _CardWidgetState extends State<CardWidget> {
                 Text(number.toString(), style: TextStyles.text14Black),
                 Gap(12),
                 Qty(
-                  svg: 'assets/image/add.svg',
+                  svg: 'assets/image/Plus.svg',
                   onTap: () {
                     setState(() {
                       number++;

@@ -53,13 +53,16 @@ class _CheckoutState extends State<Checkout> {
             ),
             // add promo
             AddPromo(),
-            Gap(10),
+            Gap(30),
             Spacer(),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text('Est. Total', style: TextStyles.text14Black),
-                Text('\$ ${widget.price * selectedQty}', style: TextStyles.text15Orange),
+                Text(
+                  '\$ ${widget.price * selectedQty}',
+                  style: TextStyles.text15Orange,
+                ),
               ],
             ),
             Gap(70),
@@ -84,6 +87,7 @@ class _CheckoutState extends State<Checkout> {
                 );
               },
             ),
+            Gap(10),
           ],
         ),
       ),
