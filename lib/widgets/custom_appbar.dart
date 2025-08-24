@@ -23,6 +23,7 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
         ),
         title: Image.asset(
           'assets/image/Logo.png',
+          width: 80,
           color: isBlack ? Colors.white : AppColor.primary,
         ),
         actions: [
