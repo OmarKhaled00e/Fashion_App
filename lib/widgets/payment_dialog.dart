@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 
-class Dialog extends StatelessWidget {
-  const Dialog({super.key});
+class PaymentDialog extends StatelessWidget {
+  const PaymentDialog({super.key});
 
   @override
   Widget build(BuildContext context) {

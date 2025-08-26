@@ -18,7 +18,9 @@ class _AddCardState extends State<AddCard> {
   String cardHolderName = '';
   String cvvCode = '';
   bool isShow = false;
+
   final _key = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -32,7 +34,8 @@ class _AddCardState extends State<AddCard> {
               children: [
                 HeaderText(text: 'Payment method'),
                 Gap(13),
-                //visa
+
+                /// Card preview
                 CreditCardWidget(
                   cardNumber: cardNumber,
                   expiryDate: expiryDate,
@@ -44,10 +47,13 @@ class _AddCardState extends State<AddCard> {
                   obscureCardCvv: false,
                   obscureCardNumber: true,
                   isHolderNameVisible: true,
+                  chipColor: Colors.grey,
+                  customCardTypeIcons: [],
                 ),
 
-                //visa form
+                /// Card form
                 CreditCardForm(
+                  formKey: _key,
                   cardNumber: cardNumber,
                   expiryDate: expiryDate,
                   cardHolderName: cardHolderName,
@@ -55,20 +61,21 @@ class _AddCardState extends State<AddCard> {
                   onCreditCardModelChange: onCreditCardModelChange,
                   isCardHolderNameUpperCase: true,
                   obscureCvv: false,
-                  formKey: _key,
                 ),
 
-                /// button
                 Gap(80),
+
+                /// Save button
                 CustomButton(
                   isSvgg: false,
                   text: 'Add CARD',
                   onTap: () {
                     if (_key.currentState!.validate()) {
+                      _key.currentState!.save();
                       final data = {
                         'number': cardNumber,
                         'name': cardHolderName,
-                        'data': expiryDate,
+                        'expiry': expiryDate,
                         'cvv': cvvCode,
                       };
                       Navigator.pop(context, data);

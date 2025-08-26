@@ -49,7 +49,8 @@ class _CheckoutState extends State<Checkout> {
                 setState(() {
                   selectedQty = value;
                 });
-              }, qty: selectedQty,
+              },
+              qty: selectedQty,
             ),
             // add promo
             AddPromo(),
@@ -77,10 +78,10 @@ class _CheckoutState extends State<Checkout> {
                       return PlaceOrder(
                         image: widget.image,
                         name: widget.name,
-                        decrption: widget.decrption,
                         qty: selectedQty,
                         price: widget.price,
                         total: widget.price * selectedQty,
+                        desp: widget.decrption,
                       );
                     },
                   ),
