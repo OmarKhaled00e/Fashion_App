@@ -49,7 +49,7 @@ class _CheckoutState extends State<Checkout> {
                 setState(() {
                   selectedQty = value;
                 });
-              },
+              }, qty: selectedQty,
             ),
             // add promo
             AddPromo(),

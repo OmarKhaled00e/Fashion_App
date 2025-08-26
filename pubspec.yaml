@@ -31,11 +31,16 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter:
     sdk: flutter
+  flutter_credit_card: ^4.1.0
   flutter_svg: ^2.2.0
   gap: ^3.0.1
   ionicons: ^0.2.2
 
 dev_dependencies:
+  flutter_launcher_icons: ^0.14.4
+
+  
+
   flutter_lints: ^5.0.0
   flutter_test:
     sdk: flutter
@@ -67,3 +72,8 @@ flutter:
         - asset: assets/fonts/Tenor_Sans/TenorSans-Regular.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+flutter_launcher_icons:
+    android: "launcher_icon"
+    ios: true
+    image_path: "assets/image/logoapp.png"
+    min_sdk_android: 21

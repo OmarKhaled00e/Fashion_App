@@ -11,16 +11,25 @@ class CardWidget extends StatefulWidget {
     required this.descrption,
     required this.price,
     required this.onChange,
+    required this.qty,
   });
   final String image, name, descrption;
   final int price;
   final Function(int) onChange;
+  final int qty;
   @override
   State<CardWidget> createState() => _CardWidgetState();
 }
 
 class _CardWidgetState extends State<CardWidget> {
-  int number = 1;
+  late int number;
+  @override
+  void initState() {
+    number = 1;
+    number = widget.qty;
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
